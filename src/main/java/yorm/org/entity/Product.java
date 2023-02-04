@@ -6,11 +6,17 @@ public class Product implements Serializable {
 
     private String name;
 
-    private double price;
+    private double storePrice;
 
-    public Product(String name, double price) {
+    private double salesPrice;
+
+    private String img;
+
+    public Product(String name, double storePrice, double salesPrice, String img) {
         this.name = name;
-        this.price = price;
+        this.storePrice = storePrice;
+        this.salesPrice = salesPrice;
+        this.img = img;
     }
 
     public String getName() {
@@ -21,19 +27,27 @@ public class Product implements Serializable {
         this.name = name;
     }
 
-    public double getPrice() {
-        return price;
+    public double getStorePrice() {
+        return storePrice;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
+    public void setStorePrice(double storePrice) {
+        this.storePrice = storePrice;
     }
 
-    @Override
-    public String toString() {
-        return "Product{" +
-                "name='" + name + '\'' +
-                ", price=" + price +
-                '}';
+    public double getSalesPrice() {
+        return salesPrice;
+    }
+
+    public void setSalesPrice(double salesPrice) {
+        this.salesPrice = salesPrice;
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
     }
 }
